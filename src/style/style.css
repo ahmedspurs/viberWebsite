@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri&display=swap');
+*{
+    direction: rtl;
+    font-family: 'El Messiri', sans-serif;
+}
+.floating-input > input::placeholder,
+.floating-input > textarea::placeholder {
+  color: transparent;
+}
+
+.floating-input > input:focus,
+.floating-input > textarea:focus,
+.floating-input > input:not(:placeholder-shown) {
+  @apply pt-8;
+}
+
+.floating-input > input:focus ~ label,
+.floating-input > textarea:focus ~ label,
+.floating-input > input:not(:placeholder-shown) ~ label {
+  @apply opacity-75 scale-75 -translate-y-3 translate-x-1;
+}
